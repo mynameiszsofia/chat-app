@@ -1,5 +1,6 @@
 import React from 'react';
 import Contact from './components/Contact';
+import ContactList from './components/ContactList';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
       character="Jac"
       status='offline'
             />
+            <ContactList />
+            
     </div>
   );
 }
