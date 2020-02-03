@@ -21,8 +21,7 @@ function App() {
       avatar='https://randomuser.me/api/portraits/women/5.jpg'
       name='Jacqueline Russel'
       character="Jac"
-      status='offline'
-            />
+      status='offline'            />
             <ContactList />
             
     </div>
