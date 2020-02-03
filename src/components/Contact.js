@@ -5,16 +5,10 @@ class Contact extends React.Component {
     constructor (props){
         super(props);
             this.state = {
-                status:false
+                online:props.online
             };
-            this.event = this.event.bind(this);
-        
+
     }
-    event() {
-        this.setState(prevState => ({ 
-            status: !prevState.status
-        }));
-        }
 
 render() {
     return (
@@ -23,12 +17,15 @@ render() {
             <div class="status">
                 <div class="name">{this.props.name}</div>
                 <div
-                onClick={this.event}>{this.state.status ? 'online' : 'offline'}
+                onClick={event => {
+                    const newStatus = !this.state.online;
+                    this.setState({ online: newStatus });
+                 }}>
                 <div class="status-2">
                        
                 
-                <div class= {this.props.status === 'online' ? "status-online":"status-offline"} ></div>  
-                <div class='status-text'>{this.props.status}</div>
+                <div class= {this.state.online ? 'status-online':"status-offline"} ></div>  
+                <div class='status-text'>{this.state.online ? "online" : "offline"}</div>
                 
                  
             </div></div></div>
